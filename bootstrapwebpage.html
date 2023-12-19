@@ -1,0 +1,126 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<style>body {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #f4f4f4;
+}
+
+#progressText {
+   text-align: center;
+   margin: 20px 0;
+   font-weight: bold;
+   color: #333;
+}
+
+#progressBar {
+   background-color: #fff;
+   margin-bottom: 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#progressContainer {
+   height: 20px;
+   background-color: #ddd;
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+#progressIndicator {
+   height: 100%;
+   width: 0;
+   background-color: #4caf50;
+   transition: width 0.3s ease;
+}
+
+.step-container {
+   display: none;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-container.active {
+   display: block;
+}
+
+/* Buttons to the right */
+.button-container {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 20px;
+}
+
+.button-container button {
+   margin-left: 10px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+   <form action="#" method="POST">
+       <div id="progressText">Step 1: Name</div>
+
+       <div id="progressBar">
+           <div id="progressContainer">
+               <div id="progressIndicator"></div>
+           </div>
+       </div>
+
+       <!-- Step 1: Name -->
+       <div class="step-container active animate__animated animate__fadeIn">
+           <h2 class="mb-4 step-title">Step 1: Name</h2>
+           <div class="mb-3">
+               <label for="name" class="form-label">Name:</label>
+               <input type="text" id="name" name="name" class="form-control" required>
+           </div>
+       </div>
+
+       <!-- Step 2: URL and Description -->
+       <div class="step-container animate__animated animate__fadeIn">
+           <h2 class="mb-4 step-title">Step 2: URL and Description</h2>
+           <div class="mb-3">
+               <label for="url" class="form-label">URL:</label>
+               <input type="url" id="url" name="url" class="form-control" required>
+           </div>
+           <div class="mb-3">
+               <label for="description" class="form-label">Description:</label>
+               <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+           </div>
+       </div>
+
+       <!-- Step 3: Dropdowns -->
+       <div class="step-container animate__animated animate__fadeIn">
+           <h2 class="mb-4 step-title">Step 3: Dropdowns</h2>
+           <div class="mb-3">
+               <label for="dropdown1" class="form-label">Dropdown 1:</label>
+               <select id="dropdown1" name="dropdown1" class="form-select" required>
+                   <option value="option1">Option 1</option>
+                   <option value="option2">Option 2</option>
+                   <option value="option3">Option 3</option>
+               </select>
+           </div>
+           <div class="mb-3">
+               <label for="dropdown2" class="form-label">Dropdown 2:</label>
+               <select id="dropdown2" name="dropdown2" class="form-select" required>
+                   <option value="optionA">Option A</option>
+                   <option value="optionB">Option B</option>
+                   <option value="optionC">Option C</option>
+               </select>
+           </div>
+       </div>
+
+       <!-- Button Container -->
+       <div class="button-container">
+           <button id="prevButton" type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+           <button id="nextButton" type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+           <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+       </div>
+   </form>
+</div>
+</body>
+</html>
