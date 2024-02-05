@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Webpage html</title>
+</head>
+<body>
+<form>
+Frist Name :<input type="text"name="First Name"/><br/>
+Last Name : <input type="text"name="Last Name"/><br/>
+</form>
+
+</body>
+</html>
+    
